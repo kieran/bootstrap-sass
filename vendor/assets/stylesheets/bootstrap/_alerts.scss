@@ -6,7 +6,7 @@
 // Base styles
 // -------------------------
 
-.alert {
+%alert {
   padding: $alert-padding;
   margin-bottom: $line-height-computed;
   border: 1px solid transparent;
@@ -37,7 +37,7 @@
 //
 // Expand the right padding and account for the close button's positioning.
 
-.alert-dismissable {
+%alert-dismissable {
  padding-right: ($alert-padding + 20);
 
   // Adjust close link position
@@ -53,15 +53,15 @@
 //
 // Generate contextual modifier classes for colorizing the alert.
 
-.alert-success {
+%alert-success {
   @include alert-variant($alert-success-bg, $alert-success-border, $alert-success-text);
 }
-.alert-info {
+%alert-info {
   @include alert-variant($alert-info-bg, $alert-info-border, $alert-info-text);
 }
-.alert-warning {
+%alert-warning {
   @include alert-variant($alert-warning-bg, $alert-warning-border, $alert-warning-text);
 }
-.alert-danger {
+%alert-danger {
   @include alert-variant($alert-danger-bg, $alert-danger-border, $alert-danger-text);
 }

@@ -4,7 +4,7 @@
 
 
 // Mixin and adjust the regular image class
-.thumbnail {
+%thumbnail {
   display: block;
   padding: $thumbnail-padding;
   margin-bottom: $line-height-computed;

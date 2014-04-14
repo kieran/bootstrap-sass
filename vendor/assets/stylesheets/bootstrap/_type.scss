@@ -7,7 +7,7 @@
 // -------------------------
 
 h1, h2, h3, h4, h5, h6,
-.h1, .h2, .h3, .h4, .h5, .h6 {
+%h1, .h2, .h3, .h4, .h5, .h6 {
   font-family: $headings-font-family;
   font-weight: $headings-font-weight;
   line-height: $headings-line-height;
@@ -59,7 +59,7 @@ p {
   margin: 0 0 ($line-height-computed / 2);
 }
 
-.lead {
+%lead {
   margin-bottom: $line-height-computed;
   font-size: floor(($font-size-base * 1.15));
   font-weight: 200;
@@ -76,25 +76,25 @@ p {
 
 // Ex: 14px base font * 85% = about 12px
 small,
-.small  { font-size: 85%; }
+%small  { font-size: 85%; }
 
 // Undo browser default styling
 cite    { font-style: normal; }
 
 mark,
-.mark {
+%mark {
   background-color: $state-warning-bg;
   padding: .2em;
 }
 
 // Alignment
-.text-left           { text-align: left; }
-.text-right          { text-align: right; }
-.text-center         { text-align: center; }
-.text-justify        { text-align: justify; }
+%text-left           { text-align: left; }
+%text-right          { text-align: right; }
+%text-center         { text-align: center; }
+%text-justify        { text-align: justify; }
 
 // Contextual colors
-.text-muted {
+%text-muted {
   color: $text-muted;
 }
 
@@ -111,7 +111,7 @@ mark,
 // Contextual backgrounds
 // For now we'll leave these alongside the text classes until v4 when we can
 // safely shift things around (per SemVer rules).
-.bg-primary {
+%bg-primary {
   // Given the contrast here, this is the only class to have its color inverted
   // automatically.
   color: #fff;
@@ -130,7 +130,7 @@ mark,
 // Page header
 // -------------------------
 
-.page-header {
+%page-header {
   padding-bottom: (($line-height-computed / 2) - 1);
   margin: ($line-height-computed * 2) 0 $line-height-computed;
   border-bottom: 1px solid $page-header-border-color;
@@ -154,14 +154,14 @@ ol {
 // List options
 
 // Unstyled keeps list items block level, just removes default browser padding and list-style
-.list-unstyled {
+%list-unstyled {
   padding-left: 0;
   list-style: none;
 }
 
 // Inline turns list items into inline-block
-.list-inline {
-  @extend .list-unstyled;
+%list-inline {
+  @extend %list-unstyled;
   margin-left: -5px;
 
   > li {
@@ -192,7 +192,7 @@ dd {
 // Defaults to being stacked without any of the below styles applied, until the
 // grid breakpoint is reached (default of ~768px).
 
-.dl-horizontal {
+%dl-horizontal {
   dd {
     @include clearfix(); // Clear the floated `dt` if an empty `dd` is present
   }
@@ -222,7 +222,7 @@ abbr[data-original-title] {
   cursor: help;
   border-bottom: 1px dotted $abbr-border-color;
 }
-.initialism {
+%initialism {
   font-size: 90%;
   text-transform: uppercase;
 }
@@ -261,7 +261,7 @@ blockquote {
 // Opposite alignment of blockquote
 //
 // Heads up: `blockquote.pull-right` has been deprecated as of v3.1.0.
-.blockquote-reverse,
+%blockquote-reverse,
 blockquote.pull-right {
   padding-right: 15px;
   padding-left: 0;

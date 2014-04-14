@@ -17,7 +17,7 @@
 // -------------------------
 
 // Outer container
-.progress {
+%progress {
   overflow: hidden;
   height: $line-height-computed;
   margin-bottom: $line-height-computed;
@@ -27,7 +27,7 @@
 }
 
 // Bar of progress
-.progress-bar {
+%progress-bar {
   float: left;
   width: 0%;
   height: 100%;
@@ -41,18 +41,18 @@
 }
 
 // Striped bars
-.progress-striped .progress-bar {
+%progress-striped .progress-bar {
   @include gradient-striped();
   background-size: 40px 40px;
 }
 
 // Call animation for the active one
-.progress.active .progress-bar {
+%progress.active .progress-bar {
   @include animation(progress-bar-stripes 2s linear infinite);
 }
 
 // Account for lower percentages
-.progress-bar {
+%progress-bar {
   &[aria-valuenow="1"],
   &[aria-valuenow="2"] {
     min-width: 30px;
@@ -72,18 +72,18 @@
 // Variations
 // -------------------------
 
-.progress-bar-success {
+%progress-bar-success {
   @include progress-bar-variant($progress-bar-success-bg);
 }
 
-.progress-bar-info {
+%progress-bar-info {
   @include progress-bar-variant($progress-bar-info-bg);
 }
 
-.progress-bar-warning {
+%progress-bar-warning {
   @include progress-bar-variant($progress-bar-warning-bg);
 }
 
-.progress-bar-danger {
+%progress-bar-danger {
   @include progress-bar-variant($progress-bar-danger-bg);
 }

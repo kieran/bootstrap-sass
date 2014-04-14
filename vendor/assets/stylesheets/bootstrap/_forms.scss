@@ -112,7 +112,7 @@ output {
 // input[type="tel"]
 // input[type="color"]
 
-.form-control {
+%form-control {
   display: block;
   width: 100%;
   height: $input-height-base; // Make inputs at least the height of their button counterpart (base line-height + padding + border)
@@ -195,7 +195,7 @@ input[type="month"] {
 // Designed to help with the organization and spacing of vertical forms. For
 // horizontal forms, use the predefined grid classes.
 
-.form-group {
+%form-group {
   margin-bottom: 15px;
 }
 
@@ -204,8 +204,8 @@ input[type="month"] {
 //
 // Indent the labels to position radios/checkboxes as hanging controls.
 
-.radio,
-.checkbox {
+%radio,
+%checkbox {
   display: block;
   min-height: $line-height-computed; // clear the floating input if there is no label text
   margin-top: 10px;
@@ -218,21 +218,21 @@ input[type="month"] {
     cursor: pointer;
   }
 }
-.radio input[type="radio"],
-.radio-inline input[type="radio"],
-.checkbox input[type="checkbox"],
-.checkbox-inline input[type="checkbox"] {
+%radio input[type="radio"],
+%radio-inline input[type="radio"],
+%checkbox input[type="checkbox"],
+%checkbox-inline input[type="checkbox"] {
   float: left;
   margin-left: -20px;
 }
-.radio + .radio,
-.checkbox + .checkbox {
+%radio + .radio,
+%checkbox + .checkbox {
   margin-top: -5px; // Move up sibling radios or checkboxes for tighter spacing
 }
 
 // Radios and checkboxes on same line
-.radio-inline,
-.checkbox-inline {
+%radio-inline,
+%checkbox-inline {
   display: inline-block;
   padding-left: 20px;
   margin-bottom: 0;
@@ -240,8 +240,8 @@ input[type="month"] {
   font-weight: normal;
   cursor: pointer;
 }
-.radio-inline + .radio-inline,
-.checkbox-inline + .checkbox-inline {
+%radio-inline + .radio-inline,
+%checkbox-inline + .checkbox-inline {
   margin-top: 0;
   margin-left: 10px; // space out consecutive inline controls
 }
@@ -251,10 +251,10 @@ input[type="month"] {
 // Note: Neither radios nor checkboxes can be readonly.
 input[type="radio"],
 input[type="checkbox"],
-.radio,
-.radio-inline,
-.checkbox,
-.checkbox-inline {
+%radio,
+%radio-inline,
+%checkbox,
+%checkbox-inline {
   &[disabled],
   fieldset[disabled] & {
     cursor: not-allowed;
@@ -276,7 +276,7 @@ input[type="checkbox"],
 //
 // Apply contextual and semantic states to individual form controls.
 
-.has-feedback {
+%has-feedback {
   // Enable absolute positioning
   position: relative;
 
@@ -286,7 +286,7 @@ input[type="checkbox"],
   }
 }
 // Feedback icon (requires .glyphicon classes)
-.form-control-feedback {
+%form-control-feedback {
   position: absolute;
   top: ($line-height-computed + 5); // Height of the `label` and its margin
   right: 0;
@@ -297,25 +297,25 @@ input[type="checkbox"],
   line-height: $input-height-base;
   text-align: center;
 }
-.input-lg + .form-control-feedback {
+%input-lg + .form-control-feedback {
   width: $input-height-large;
   height: $input-height-large;
   line-height: $input-height-large;
 }
-.input-sm + .form-control-feedback {
+%input-sm + .form-control-feedback {
   width: $input-height-small;
   height: $input-height-small;
   line-height: $input-height-small;
 }
 
 // Feedback states
-.has-success {
+%has-success {
   @include form-control-validation($state-success-text, $state-success-text, $state-success-bg);
 }
-.has-warning {
+%has-warning {
   @include form-control-validation($state-warning-text, $state-warning-text, $state-warning-bg);
 }
-.has-error {
+%has-error {
   @include form-control-validation($state-danger-text, $state-danger-text, $state-danger-bg);
 }
 
@@ -325,7 +325,7 @@ input[type="checkbox"],
 // Apply class to a `p` element to make any string of text align with labels in
 // a horizontal form layout.
 
-.form-control-static {
+%form-control-static {
   margin-bottom: 0; // Remove default margin from `p`
 }
 
@@ -335,7 +335,7 @@ input[type="checkbox"],
 // Apply to any element you wish to create light text for placement immediately
 // below a form control. Use for general help, formatting, or instructional text.
 
-.help-block {
+%help-block {
   display: block; // account for any element using help-block
   margin-top: 5px;
   margin-bottom: 10px;
@@ -355,7 +355,7 @@ input[type="checkbox"],
 //
 // Heads up! This is mixin-ed into `.navbar-form` in navbars.less.
 
-.form-inline {
+%form-inline {
 
   // Kick in the inline
   @media (min-width: $screen-sm-min) {
@@ -427,7 +427,7 @@ input[type="checkbox"],
 // Horizontal forms are built on grid classes and allow you to create forms with
 // labels on the left and inputs on the right.
 
-.form-horizontal {
+%form-horizontal {
 
   // Consistent vertical alignment of radios and checkboxes
   //

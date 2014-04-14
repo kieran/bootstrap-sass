@@ -69,29 +69,29 @@
   }
 
   // Bootstrap components
-  .navbar {
+  %navbar {
     display: none;
   }
-  .table {
+  %table {
     td,
     th {
       background-color: #fff !important;
     }
   }
-  .btn,
-  .dropup > .btn {
+  %btn,
+  %dropup > .btn {
     > .caret {
       border-top-color: #000 !important;
     }
   }
-  .label {
+  %label {
     border: 1px solid #000;
   }
 
-  .table {
+  %table {
     border-collapse: collapse !important;
   }
-  .table-bordered {
+  %table-bordered {
     th,
     td {
       border: 1px solid #ddd !important;

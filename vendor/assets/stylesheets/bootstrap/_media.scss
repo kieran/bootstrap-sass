@@ -7,28 +7,28 @@
 // -------------------------
 
 // Clear the floats
-.media,
-.media-body {
+%media,
+%media-body {
   overflow: hidden;
   zoom: 1;
 }
 
 // Proper spacing between instances of .media
-.media,
-.media .media {
+%media,
+%media .media {
   margin-top: 15px;
 }
-.media:first-child {
+%media:first-child {
   margin-top: 0;
 }
 
 // For images and videos, set to block
-.media-object {
+%media-object {
   display: block;
 }
 
 // Reset margins on headings for tighter default spacing
-.media-heading {
+%media-heading {
   margin: 0 0 5px;
 }
 
@@ -36,7 +36,7 @@
 // Media image alignment
 // -------------------------
 
-.media {
+%media {
   > .pull-left {
     margin-right: 10px;
   }
@@ -50,7 +50,7 @@
 // -------------------------
 
 // Undo default ul/ol styles
-.media-list {
+%media-list {
   padding-left: 0;
   list-style: none;
 }

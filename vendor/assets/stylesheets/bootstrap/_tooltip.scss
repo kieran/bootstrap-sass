@@ -4,7 +4,7 @@
 
 
 // Base class
-.tooltip {
+%tooltip {
   position: absolute;
   z-index: $zindex-tooltip;
   display: block;
@@ -21,7 +21,7 @@
 }
 
 // Wrapper for the tooltip content
-.tooltip-inner {
+%tooltip-inner {
   max-width: $tooltip-max-width;
   padding: 3px 8px;
   color: $tooltip-color;
@@ -32,14 +32,14 @@
 }
 
 // Arrows
-.tooltip-arrow {
+%tooltip-arrow {
   position: absolute;
   width: 0;
   height: 0;
   border-color: transparent;
   border-style: solid;
 }
-.tooltip {
+%tooltip {
   &.top .tooltip-arrow {
     bottom: 0;
     left: 50%;

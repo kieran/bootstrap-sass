@@ -13,12 +13,12 @@
 // --------------------------------------------------
 
 // Common styles
-.btn-default,
-.btn-primary,
-.btn-success,
-.btn-info,
-.btn-warning,
-.btn-danger {
+%btn-default,
+%btn-primary,
+%btn-success,
+%btn-info,
+%btn-warning,
+%btn-danger {
   text-shadow: 0 -1px 0 rgba(0,0,0,.2);
   $shadow: inset 0 1px 0 rgba(255,255,255,.15), 0 1px 1px rgba(0,0,0,.075);
   @include box-shadow($shadow);
@@ -51,7 +51,7 @@
 }
 
 // Common styles
-.btn {
+%btn {
   // Remove the gradient for the pressed/active state
   &:active,
   &.active {
@@ -60,12 +60,12 @@
 }
 
 // Apply the mixin to the buttons
-.btn-default { @include btn-styles($btn-default-bg); text-shadow: 0 1px 0 #fff; border-color: #ccc; }
-.btn-primary { @include btn-styles($btn-primary-bg); }
-.btn-success { @include btn-styles($btn-success-bg); }
-.btn-info    { @include btn-styles($btn-info-bg); }
-.btn-warning { @include btn-styles($btn-warning-bg); }
-.btn-danger  { @include btn-styles($btn-danger-bg); }
+%btn-default { @include btn-styles($btn-default-bg); text-shadow: 0 1px 0 #fff; border-color: #ccc; }
+%btn-primary { @include btn-styles($btn-primary-bg); }
+%btn-success { @include btn-styles($btn-success-bg); }
+%btn-info    { @include btn-styles($btn-info-bg); }
+%btn-warning { @include btn-styles($btn-warning-bg); }
+%btn-danger  { @include btn-styles($btn-danger-bg); }
 
 
 
@@ -73,8 +73,8 @@
 // Images
 // --------------------------------------------------
 
-.thumbnail,
-.img-thumbnail {
+%thumbnail,
+%img-thumbnail {
   @include box-shadow(0 1px 2px rgba(0,0,0,.075));
 }
 
@@ -84,14 +84,14 @@
 // Dropdowns
 // --------------------------------------------------
 
-.dropdown-menu > li > a:hover,
-.dropdown-menu > li > a:focus {
+%dropdown-menu > li > a:hover,
+%dropdown-menu > li > a:focus {
   @include gradient-vertical($start-color: $dropdown-link-hover-bg, $end-color: darken($dropdown-link-hover-bg, 5%));
   background-color: darken($dropdown-link-hover-bg, 5%);
 }
-.dropdown-menu > .active > a,
-.dropdown-menu > .active > a:hover,
-.dropdown-menu > .active > a:focus {
+%dropdown-menu > .active > a,
+%dropdown-menu > .active > a:hover,
+%dropdown-menu > .active > a:focus {
   @include gradient-vertical($start-color: $dropdown-link-active-bg, $end-color: darken($dropdown-link-active-bg, 5%));
   background-color: darken($dropdown-link-active-bg, 5%);
 }
@@ -103,7 +103,7 @@
 // --------------------------------------------------
 
 // Default navbar
-.navbar-default {
+%navbar-default {
   @include gradient-vertical($start-color: lighten($navbar-default-bg, 10%), $end-color: $navbar-default-bg);
   @include reset-filter(); // Remove gradient in IE<10 to fix bug where dropdowns don't get triggered
   border-radius: $navbar-border-radius;
@@ -115,13 +115,13 @@
     @include box-shadow(inset 0 3px 9px rgba(0,0,0,.075));
   }
 }
-.navbar-brand,
-.navbar-nav > li > a {
+%navbar-brand,
+%navbar-nav > li > a {
   text-shadow: 0 1px 0 rgba(255,255,255,.25);
 }
 
 // Inverted navbar
-.navbar-inverse {
+%navbar-inverse {
   @include gradient-vertical($start-color: lighten($navbar-inverse-bg, 10%), $end-color: $navbar-inverse-bg);
   @include reset-filter(); // Remove gradient in IE<10 to fix bug where dropdowns don't get triggered
 
@@ -137,9 +137,9 @@
 }
 
 // Undo rounded corners in static and fixed navbars
-.navbar-static-top,
-.navbar-fixed-top,
-.navbar-fixed-bottom {
+%navbar-static-top,
+%navbar-fixed-top,
+%navbar-fixed-bottom {
   border-radius: 0;
 }
 
@@ -150,7 +150,7 @@
 // --------------------------------------------------
 
 // Common styles
-.alert {
+%alert {
   text-shadow: 0 1px 0 rgba(255,255,255,.2);
   $shadow: inset 0 1px 0 rgba(255,255,255,.25), 0 1px 2px rgba(0,0,0,.05);
   @include box-shadow($shadow);
@@ -163,10 +163,10 @@
 }
 
 // Apply the mixin to the alerts
-.alert-success    { @include alert-styles($alert-success-bg); }
-.alert-info       { @include alert-styles($alert-info-bg); }
-.alert-warning    { @include alert-styles($alert-warning-bg); }
-.alert-danger     { @include alert-styles($alert-danger-bg); }
+%alert-success    { @include alert-styles($alert-success-bg); }
+%alert-info       { @include alert-styles($alert-info-bg); }
+%alert-warning    { @include alert-styles($alert-warning-bg); }
+%alert-danger     { @include alert-styles($alert-danger-bg); }
 
 
 
@@ -175,7 +175,7 @@
 // --------------------------------------------------
 
 // Give the progress background some depth
-.progress {
+%progress {
   @include gradient-vertical($start-color: darken($progress-bg, 4%), $end-color: $progress-bg)
 }
 
@@ -185,11 +185,11 @@
 }
 
 // Apply the mixin to the progress bars
-.progress-bar            { @include progress-bar-styles($progress-bar-bg); }
-.progress-bar-success    { @include progress-bar-styles($progress-bar-success-bg); }
-.progress-bar-info       { @include progress-bar-styles($progress-bar-info-bg); }
-.progress-bar-warning    { @include progress-bar-styles($progress-bar-warning-bg); }
-.progress-bar-danger     { @include progress-bar-styles($progress-bar-danger-bg); }
+%progress-bar            { @include progress-bar-styles($progress-bar-bg); }
+%progress-bar-success    { @include progress-bar-styles($progress-bar-success-bg); }
+%progress-bar-info       { @include progress-bar-styles($progress-bar-info-bg); }
+%progress-bar-warning    { @include progress-bar-styles($progress-bar-warning-bg); }
+%progress-bar-danger     { @include progress-bar-styles($progress-bar-danger-bg); }
 
 
 
@@ -197,13 +197,13 @@
 // List groups
 // --------------------------------------------------
 
-.list-group {
+%list-group {
   border-radius: $border-radius-base;
   @include box-shadow(0 1px 2px rgba(0,0,0,.075));
 }
-.list-group-item.active,
-.list-group-item.active:hover,
-.list-group-item.active:focus {
+%list-group-item.active,
+%list-group-item.active:hover,
+%list-group-item.active:focus {
   text-shadow: 0 -1px 0 darken($list-group-active-bg, 10%);
   @include gradient-vertical($start-color: $list-group-active-bg, $end-color: darken($list-group-active-bg, 7.5%));
   border-color: darken($list-group-active-border, 7.5%);
@@ -216,7 +216,7 @@
 // --------------------------------------------------
 
 // Common styles
-.panel {
+%panel {
   @include box-shadow(0 1px 2px rgba(0,0,0,.05));
 }
 
@@ -226,12 +226,12 @@
 }
 
 // Apply the mixin to the panel headings only
-.panel-default > .panel-heading   { @include panel-heading-styles($panel-default-heading-bg); }
-.panel-primary > .panel-heading   { @include panel-heading-styles($panel-primary-heading-bg); }
-.panel-success > .panel-heading   { @include panel-heading-styles($panel-success-heading-bg); }
-.panel-info > .panel-heading      { @include panel-heading-styles($panel-info-heading-bg); }
-.panel-warning > .panel-heading   { @include panel-heading-styles($panel-warning-heading-bg); }
-.panel-danger > .panel-heading    { @include panel-heading-styles($panel-danger-heading-bg); }
+%panel-default > .panel-heading   { @include panel-heading-styles($panel-default-heading-bg); }
+%panel-primary > .panel-heading   { @include panel-heading-styles($panel-primary-heading-bg); }
+%panel-success > .panel-heading   { @include panel-heading-styles($panel-success-heading-bg); }
+%panel-info > .panel-heading      { @include panel-heading-styles($panel-info-heading-bg); }
+%panel-warning > .panel-heading   { @include panel-heading-styles($panel-warning-heading-bg); }
+%panel-danger > .panel-heading    { @include panel-heading-styles($panel-danger-heading-bg); }
 
 
 
@@ -239,7 +239,7 @@
 // Wells
 // --------------------------------------------------
 
-.well {
+%well {
   @include gradient-vertical($start-color: darken($well-bg, 5%), $end-color: $well-bg);
   border-color: darken($well-bg, 10%);
   $shadow: inset 0 1px 3px rgba(0,0,0,.05), 0 1px 0 rgba(255,255,255,.1);
