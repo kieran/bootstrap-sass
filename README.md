@@ -1,6 +1,6 @@
-# Bootstrap for Sass [![Build Status](http://img.shields.io/travis/twbs/bootstrap-sass.svg)](http://travis-ci.org/twbs/bootstrap-sass)
+# Polite Bootstrap for Sass
 
-`bootstrap-sass` is a Sass-powered version of [Bootstrap](http://github.com/twbs/bootstrap), ready to drop right into your Sass powered applications.
+A fork of `bootstrap-sass` that uses Sass' silent selectors so you only include what you extend.
 
 ## Installation
 
